@@ -1,0 +1,30 @@
+{
+  "name": "weather-forecast-app",
+  "version": "1.0.0",
+  "description": "Weather forecast app using openmap API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acushlakoncept/weather-app.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "javascript",
+    "bootstrap",
+    "webpack",
+    "openmap",
+    "api",
+    "api"
+  ],
+  "author": "Uduak Essien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acushlakoncept/weather-app/issues"
+  },
+  "homepage": "https://github.com/acushlakoncept/weather-app#readme"
+}

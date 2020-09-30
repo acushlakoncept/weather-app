@@ -33,9 +33,9 @@ const parseData = (data) => {
   extractedData.ok = ok;
   extractedData.status = status;
   extractedData.temp = `${temp}<sup>0</sup>C`;
-  extractedData.tempInFaren = `${tempInFaren}F`;;
+  extractedData.tempInFaren = `${tempInFaren}<sup>0</sup>F`;
   extractedData.feelsLike = `Feels like: ${feelsLike}<sup>0</sup>C`;
-  extractedData.feelsLikeInFaren = `Feels like: ${feelsLikeInFaren}F`;
+  extractedData.feelsLikeInFaren = `Feels like: ${feelsLikeInFaren}<sup>0</sup>F`;
 };
 
 const celciusToFaren = (celcius) => {

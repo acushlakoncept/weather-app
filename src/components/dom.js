@@ -11,7 +11,6 @@ const dom = {
   date: document.querySelector("[data-date]"),
   celcius: document.querySelector("[data-celcius]"),
   fahren: document.querySelector("[data-fahren]")
-
 };
 
 export { dom };

@@ -14,7 +14,7 @@ I got comfortable consuming the API using Async/Await to work with promises usin
 - OpenMapAPI
 
 ## Live Demo
-[Live Demo Link](https://acushlakoncept.github.io/todo/)
+[Live Demo Link](https://acushlakoncept.github.io/weather-app/)
 
 
 ## Getting Started

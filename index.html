@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Forecast App</title>
+    <meta name="theme-color" content="#563d7c" />
   </head>
-  <body>
-    <div class="content"></div>
+  <body class="text-center d-flex justify-content-center">
+    
+    <div class="content col-sm-4 d-flex flex-column justify-content-center">
+    <h2>Current Weather</h2>
+    <h5 class="date mb-5" data-date></h5>
+      <form data-form class="text-center">
+        <div class="form-group ">
+            <input class="form-control" data-input type="text" placeholder="Enter city name">
+        </div>
+      </form>
+      
+      <div data-weather-title>
+        <img data-icon alt="weather-icon" />
+        <span class="temp"></span>
+      </div>
+      <h1 class="cover-heading" data-name></h1>
+      <p class="lead" data-status></p>
+      <p class="lead" data-humid></p>
+      <p class="lead" data-feels-like></p>
+    </div>
 
     <script src="main.js"></script>
   </body>

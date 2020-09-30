@@ -8,7 +8,8 @@ const dom = {
   status: document.querySelector("[data-status]"),
   humidity: document.querySelector("[data-humid]"),
   feelsLike: document.querySelector("[data-feels-like]"),
-  date: document.querySelector("[data-date]")
+  date: document.querySelector("[data-date]"),
+  celcius: document.querySelector("[data-celcius]")
 
 };
 

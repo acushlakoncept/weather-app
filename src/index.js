@@ -3,7 +3,7 @@ import "./css/app.scss";
 import  {fetchWeatherData}  from './components/weather'
 import { dom } from "./components/dom";
 
-fetchWeatherData('Uyo')
+console.log(fetchWeatherData('Uyo'))
 
 dom.inputForm.addEventListener('submit', e => {
     e.preventDefault()

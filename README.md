@@ -24,12 +24,12 @@ To get a local copy of the repository please run the following commands on your 
 ```bash
 $ cd <folder>
 $ git clone https://github.com/acushlakoncept/weather-app.git
-$ cd todo
+$ cd weather-app
 $ npm install
 $ npm run start
 ```
 
-## Author
+## Author 
 
 **Uduak Essien**
 

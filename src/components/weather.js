@@ -5,9 +5,7 @@ const extractedData = {};
 
 const parseData = (data) => {
   if (data.cod === "404") {
-    extractedData.ok = false;
     alert(data.message);
-    extractedData.message = data.message;
     return;
   }
 
@@ -17,16 +15,10 @@ const parseData = (data) => {
   const icon = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
   const temp = data.main.temp;
   const tempInFaren = celciusToFaren(data.main.temp);
-  const minTemp = data.main.temp_min;
-  const minTempInFaren = celciusToFaren(data.main.temp_min);
-  const maxTemp = data.main.temp_max;
-  const maxTempInFaren = celciusToFaren(data.main.temp_max);
   const humidity = data.main.humidity;
   const feelsLike = data.main.feels_like;
   const feelsLikeInFaren = celciusToFaren(data.main.feels_like);
   const country = data.sys.country;
-  const sunrise = readableDate(new Date(parseInt(data.sys.sunrise, 10) * 1000));
-  const sunset = readableDate(new Date(parseInt(data.sys.sunset, 10) * 1000));
   const cityName = data.name;
   const date = readableDate(new Date(parseInt(data.dt, 10) * 1000));
 
@@ -43,7 +35,7 @@ const parseData = (data) => {
   extractedData.temp = `${temp}<sup>0</sup>C`;
   extractedData.tempInFaren = `${tempInFaren}F`;;
   extractedData.feelsLike = `Feels like: ${feelsLike}<sup>0</sup>C`;
-  extractedData.feelsLikeInFaren = `Feels like: ${feelsLike}F`;
+  extractedData.feelsLikeInFaren = `Feels like: ${feelsLikeInFaren}F`;
 };
 
 const celciusToFaren = (celcius) => {

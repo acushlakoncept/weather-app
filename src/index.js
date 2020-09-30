@@ -1,9 +1,9 @@
 import "bootstrap";
 import "./css/app.scss";
-import  {fetchWeatherData}  from './components/weather'
+import  {fetchWeatherData, extractedData}  from './components/weather'
 import { dom } from "./components/dom";
 
-console.log(fetchWeatherData('Uyo'))
+fetchWeatherData('Uyo')
 
 dom.inputForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -11,3 +11,12 @@ dom.inputForm.addEventListener('submit', e => {
     dom.inputForm.reset();
 })
 
+dom.celcius.addEventListener('click', e => {
+    console.log('hey')
+    console.log(extractedData.ok)
+})
+
+dom.farenHeit.addEventListener('click', e => {
+    console.log('hey')
+    console.log(extractedData.ok)
+})

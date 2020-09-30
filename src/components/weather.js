@@ -1,18 +1,13 @@
 import { dom } from "./dom";
 
 const API_KEY = "3bde4932bdb5a3dc33da7f043e0069e9";
-
-// const content = document.querySelector('.content')
-// const cityTitle = document.querySelector('[data-name]')
-// const weatherIcon = document.querySelector('[data-icon]')
+const extractedData = {};
 
 const parseData = (data) => {
-  const extractedData = {};
-
   if (data.cod === "404") {
     extractedData.ok = false;
     alert(data.message);
-    // extractedData.message = data.message;
+    extractedData.message = data.message;
     return;
   }
 
@@ -28,11 +23,12 @@ const parseData = (data) => {
   const maxTempInFaren = celciusToFaren(data.main.temp_max);
   const humidity = data.main.humidity;
   const feelsLike = data.main.feels_like;
+  const feelsLikeInFaren = celciusToFaren(data.main.feels_like);
   const country = data.sys.country;
-  const sunrise = new Date(parseInt(data.sys.sunrise, 10) * 1000).toGMTString();
-  const sunset = new Date(parseInt(data.sys.sunset, 10) * 1000).toGMTString();
+  const sunrise = readableDate(new Date(parseInt(data.sys.sunrise, 10) * 1000));
+  const sunset = readableDate(new Date(parseInt(data.sys.sunset, 10) * 1000));
   const cityName = data.name;
-  const date = new Date(parseInt(data.dt, 10) * 1000);
+  const date = readableDate(new Date(parseInt(data.dt, 10) * 1000));
 
   dom.city.innerText = `${cityName}, ${country}`;
   dom.icon.src = icon;
@@ -40,7 +36,14 @@ const parseData = (data) => {
   dom.status.innerText = `${status} | ${description}`;
   dom.humidity.innerText = `Humidity: ${humidity}%`;
   dom.feelsLike.innerHTML = `Feels like: ${feelsLike}<sup>0</sup>C`;
-  dom.date.innerText = readableDate(date);
+  dom.date.innerText = date;
+
+  extractedData.ok = ok;
+  extractedData.status = status;
+  extractedData.temp = temp;
+  extractedData.tempInFaren = tempInFaren;
+  extractedData.feelsLike = feelsLike;
+  extractedData.feelsLikeInFaren = feelsLikeInFaren;
 };
 
 const celciusToFaren = (celcius) => {
@@ -64,4 +67,4 @@ const fetchWeatherData = async (city) => {
   }
 };
 
-export { fetchWeatherData };
+export { fetchWeatherData, extractedData };

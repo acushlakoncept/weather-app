@@ -40,10 +40,10 @@ const parseData = (data) => {
 
   extractedData.ok = ok;
   extractedData.status = status;
-  extractedData.temp = temp;
-  extractedData.tempInFaren = tempInFaren;
-  extractedData.feelsLike = feelsLike;
-  extractedData.feelsLikeInFaren = feelsLikeInFaren;
+  extractedData.temp = `${temp}<sup>0</sup>C`;
+  extractedData.tempInFaren = `${tempInFaren}F`;;
+  extractedData.feelsLike = `Feels like: ${feelsLike}<sup>0</sup>C`;
+  extractedData.feelsLikeInFaren = `Feels like: ${feelsLike}F`;
 };
 
 const celciusToFaren = (celcius) => {

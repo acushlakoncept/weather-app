@@ -12,11 +12,11 @@ dom.inputForm.addEventListener('submit', e => {
 })
 
 dom.celcius.addEventListener('click', e => {
-    console.log('hey')
-    console.log(extractedData.ok)
+  dom.temp.innerHTML = extractedData.temp;
+  dom.feelsLike.innerHTML = extractedData.feelsLike;
 })
 
-dom.farenHeit.addEventListener('click', e => {
-    console.log('hey')
-    console.log(extractedData.ok)
+dom.fahren.addEventListener('click', e => {
+  dom.temp.innerHTML = extractedData.tempInFaren;
+  dom.feelsLike.innerHTML = extractedData.feelsLikeInFaren;
 })

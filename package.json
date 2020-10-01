@@ -1,0 +1,49 @@
+{
+  "name": "weather-forecast-app",
+  "version": "1.0.0",
+  "description": "Weather forecast app using openmap API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack --config webpack.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acushlakoncept/weather-app.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "javascript",
+    "bootstrap",
+    "webpack",
+    "openmap",
+    "api"
+  ],
+  "author": "Uduak Essien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acushlakoncept/weather-app/issues"
+  },
+  "homepage": "https://github.com/acushlakoncept/weather-app#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^4.0.2",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}

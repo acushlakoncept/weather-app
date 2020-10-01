@@ -22,7 +22,6 @@ I got comfortable consuming the API using Async/Await to work with promises usin
 To get a local copy of the repository please run the following commands on your terminal:
 
 ```bash
-$ cd <folder>
 $ git clone https://github.com/acushlakoncept/weather-app.git
 $ cd weather-app
 $ npm install
